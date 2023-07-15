@@ -1,0 +1,61 @@
+.list-student-of-one-class {
+    text-align: center;
+
+    .title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+
+    .list-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 20px;
+
+        .item {
+            background-color: antiquewhite;
+            transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+            width: 22%;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            margin: 0 15px 20px 15px;
+
+            .avatar {
+                margin: 12px 20px;
+                width: 52px;
+                height: 52px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 1px solid #AA1D2B;
+                }
+            }
+
+            .info {
+                text-align: left;
+                padding-top: 12px;
+
+                .name {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .code {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: #545454;
+                }
+            }
+        }
+
+        .item:hover {
+            background-color: rgb(255, 217, 166);
+        }
+    }
+
+}

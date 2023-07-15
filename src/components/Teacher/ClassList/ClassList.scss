@@ -1,0 +1,50 @@
+.class-list {
+    padding: 50px 100px 0 100px;
+    text-align: left;
+
+    .title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .class-items {
+        padding-top: 20px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .item {
+            width: 47%;
+            background-color: #e5d2d2;
+            margin: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+
+        .item:hover {
+            background-color: #e3bdbd;
+        }
+
+        .subject-name {
+            font-size: 18px;
+
+        }
+
+        .learning-day,
+        .learning-time {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #3d3d3d;
+        }
+
+        .learning-time {
+            margin-left: 20px;
+        }
+    }
+}

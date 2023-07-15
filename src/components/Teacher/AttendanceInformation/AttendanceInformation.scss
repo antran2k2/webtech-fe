@@ -1,0 +1,90 @@
+.attendance-information {
+    padding: 30px;
+
+    .options {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .title-option {
+            font-size: 22px;
+            font-weight: 600;
+            margin-right: 20px;
+        }
+
+        input {
+            text-align: center;
+            font-size: 18px;
+            height: 22px;
+            font-weight: 600;
+            width: 50px;
+            padding-left: 16px;
+            padding-top: 3px;
+        }
+
+        .btn-submit {
+            margin-left: 20px;
+            line-height: 36px;
+            width: 100px;
+            height: 38px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            border: 3px solid #AA1D2B;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .btn-submit:hover {
+            background-color: #AA1D2B;
+            color: #fff;
+        }
+    }
+
+    .list-student {
+        .list-tilte {
+            text-align: left;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .list-items {
+
+            .item {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
+                align-items: center;
+
+                .colum {
+                    width: 200px;
+                    font-size: 18px;
+
+                    .btn {
+                        width: 70px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        height: 32px;
+                        background-color: #28a745;
+                        margin: auto;
+                        line-height: 32px;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        color: #fff;
+                    }
+
+                    .btn:hover {
+                        background-color: #218838;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fw6 {
+    font-weight: 600;
+}

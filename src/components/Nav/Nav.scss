@@ -1,0 +1,25 @@
+.nav {
+    height: 60px;
+    color: #000;
+    padding: 0 100px;
+    display: flex;
+
+    .nav-item {
+        line-height: 60px;
+        font-size: 16px;
+        padding: 0 20px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .nav-item:hover {
+        color: #fff;
+        background: #AA1D2B;
+    }
+
+    .nav-item-active {
+        color: #fff;
+        background: #AA1D2B;
+    }
+}

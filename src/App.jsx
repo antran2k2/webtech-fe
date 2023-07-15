@@ -1,7 +1,9 @@
 import axios from 'axios';
 import './App.scss';
 
-import Login from './views/Login/Login.jsx';
+import Login from './views/Login/Login.js';
+import Student from './views/Student/Student'
+import Teacher from './views/Teacher/Teacher';
 
 import { useEffect, useState, useContext } from 'react';
 import ToastMessage from './components/ToastMessage/ToastMessage';
@@ -44,8 +46,8 @@ function App() {
     return (
         <div className="App">
             {status === 'login' && <Login handleLogin={handleLogin} />}
-            {/* {status === 'student' && <Student />}
-            {status === 'teacher' && <Teacher />} */}
+            {status === 'student' && <Student />}
+            {status === 'teacher' && <Teacher />}
             {context.isToastMessage && <ToastMessage />}
         </div>
     );
