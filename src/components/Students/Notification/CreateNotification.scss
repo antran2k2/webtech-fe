@@ -1,0 +1,101 @@
+.create-notification {
+    text-align: center;
+
+    .btn-create-outline {
+        display: inline-block;
+
+        .btn-create {
+            display: flex;
+            align-items: center;
+            border: 1px solid #28a745;
+            padding: 10px;
+            border-radius: 30px;
+            background-color: #28a745;
+            color: #fff;
+            cursor: pointer;
+
+            .btn-icon {
+                font-size: 36px;
+            }
+
+            .btn-text {
+                margin-left: 10px;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .btn-create:hover {
+            background-color: #218838;
+        }
+    }
+
+}
+
+.form-add-notification {
+    .title-form {
+        text-align: left;
+        margin: 10px 0;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        resize: none;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .btn-outline {
+        margin-top: 20px;
+        text-align: right;
+
+        .btn {
+            background-color: #28a745;
+            font-size: 22px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+    }
+
+}
+
+.form-add-notification {
+    /* Các kiểu CSS cho trạng thái xuất hiện */
+    animation: fade-in 1.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

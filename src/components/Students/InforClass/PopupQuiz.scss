@@ -1,0 +1,74 @@
+.popup-quiz {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+
+    .container {
+        position: relative;
+        background-color: #fff;
+        display: inline-block;
+        min-width: 1000px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        min-height: calc(100vh - 80px);
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            color: red;
+        }
+
+        .time {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ccc;
+            margin: 0 60px;
+            padding-bottom: 30px;
+        }
+
+        .items {
+            text-align: left;
+            padding-left: 60px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 30px;
+
+            ul,
+            li {
+                list-style-type: none;
+            }
+        }
+
+        .title-point {
+            font-size: 24px;
+            margin: 40px 0 20px 0;
+        }
+
+        .point {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .btn-add-question {
+            font-size: 16px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 6px;
+            background-color: #4CAF50;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 600;
+        }
+    }
+}
