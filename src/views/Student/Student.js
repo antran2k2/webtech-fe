@@ -7,7 +7,7 @@ import Nav from '../../components/Nav/Nav';
 import { useEffect } from 'react';
 
 function Student() {
-    useEffect(() => {}, []);
+    useEffect(() => { }, []);
     const listTo = [
         {
             to: '/',

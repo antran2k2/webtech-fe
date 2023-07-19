@@ -1,0 +1,134 @@
+.popup-create-quiz {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+
+    .container {
+        position: relative;
+        background-color: #fff;
+        display: inline-block;
+        min-width: 1000px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        min-height: calc(100vh - 80px);
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            color: red;
+        }
+
+        .time {
+            .text-time {
+                input {
+                    width: 80px;
+                }
+
+                input[type="time"]::-webkit-calendar-picker-indicator {
+                    display: none;
+                }
+            }
+        }
+
+        .question {
+            text-align: left;
+            padding-left: 50px;
+            padding-right: 50px;
+            display: flex;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            label {}
+
+            input {
+                flex: 1;
+                margin-left: 20px;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #000;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        .answer {
+            text-align: left;
+            padding-left: 80px;
+            padding-right: 50px;
+            font-size: 18px;
+            display: flex;
+            margin-bottom: 10px;
+
+            label {}
+
+            input {
+                flex: 1;
+                margin-left: 20px;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                font-size: 15px;
+            }
+
+            input:focus {
+                border-bottom: 1px solid #000;
+            }
+        }
+
+        .answer-correct {
+            font-size: 20px;
+            margin: 20px 0;
+
+            label {
+                margin-right: 20px;
+            }
+
+            select {
+                width: 50px;
+                font-size: 18px;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+
+        .btn-add-question {
+            font-size: 16px;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            background-color: #4CAF50;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 600;
+        }
+    }
+
+    .list-items {
+        padding-left: 70px;
+
+        ul,
+        li {
+            list-style-type: none;
+            text-align: left;
+        }
+    }
+
+    h3 {
+        span {
+            font-size: 22px;
+        }
+    }
+
+
+}

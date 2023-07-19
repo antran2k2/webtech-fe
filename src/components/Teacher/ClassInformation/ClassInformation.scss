@@ -1,0 +1,119 @@
+.inforname-teacher {
+    border: 2px solid #ccc;
+    margin: 50px;
+    border-radius: 4px;
+    padding: 30px;
+    display: flex;
+
+    .left {
+        text-align: left;
+        width: 50%;
+
+        .item {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px;
+        }
+    }
+
+    .right {
+        width: 50%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        border-left: 2px solid #ccc;
+
+        .outline-btn {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+            .btn {
+                margin: 30px;
+                display: inline-block;
+                padding: 0 14px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 6px;
+                font-weight: 600;
+                background-color: #bbbbbb;
+                cursor: not-allowed;
+            }
+
+            .active {
+                cursor: pointer !important;
+                background-color: #AA1D2B !important;
+            }
+        }
+    }
+}
+
+.popup-create-attendance {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000, 0.4);
+
+    .container {
+        background-color: #fff;
+        display: inline-block;
+        margin-top: 50vh;
+        transform: translateY(-80%);
+        padding: 20px;
+        position: relative;
+        min-width: 260px;
+
+        .icon-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+        }
+
+        .icon-close:hover {
+            cursor: pointer;
+        }
+
+        .subject {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px;
+            margin-top: 4px;
+        }
+
+        .lession-number {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .btn-create {
+            background-color: #28a745;
+            color: #fff;
+            display: inline-block;
+            padding: 10px 15px 11px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 8px;
+            line-height: 17px;
+            margin-top: 12px;
+        }
+
+        .btn-create:hover {
+            background-color: #218838;
+            cursor: pointer;
+        }
+    }
+}
+
+.no-select {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
+    user-select: none;
+}
