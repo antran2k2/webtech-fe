@@ -1,11 +1,15 @@
 // Format thời gian hh:mm:ss -> hh:mm
 const formatTime = (time) => {
-    const parts = time.split(':');
-    if (parts.length === 3) {
-        const formattedTime = `${parts[0]}:${parts[1]}`;
-        return formattedTime;
+    try {
+        const parts = time.split(':');
+        if (parts.length === 3) {
+            const formattedTime = `${parts[0]}:${parts[1]}`;
+            return formattedTime;
+        }
+        return time; // Trả về thời gian không đúng định dạng nếu không phải "hh:mm:ss"
+    } catch (error) {
+        return '';
     }
-    return time; // Trả về thời gian không đúng định dạng nếu không phải "hh:mm:ss"
 };
 
 // Format thời gian 2023-05-28T02:59:18.000Z -> 2023-05-28

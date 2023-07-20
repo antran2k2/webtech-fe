@@ -2,8 +2,11 @@ import './Teacher.scss';
 import ClassList from '../../components/Teacher/ClassList/ClassList';
 import Detail from '../../components/Teacher/Detail/Detail';
 import { useState } from 'react';
+import { checkLession } from '../../utils/functionCusom/functionCusom';
 
 function Teacher() {
+    const lessionNumber = checkLession();
+
     // Tình trạng chọn list: danh sách lớp đang dạy trong kỳ, detail: chi tiết 1 lớp
     const [options, setOptions] = useState('list');
 
@@ -35,10 +38,10 @@ function Teacher() {
                     </div>
                     <div className="avatar">
                         <img
-                            src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/313928031_1857605907938653_6284185701097598776_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Z2cGsgEdC7MAX8zGymO&_nc_ht=scontent.fhan5-11.fna&oh=00_AfDCRQPoMYJdH3rzClCswemoNuHr_yvLMD4O6GHhquToyg&oe=647F7B61"
+                            src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/313928031_1857605907938653_6284185701097598776_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZD_ddflYUFUAX9aKNAg&_nc_ht=scontent.fhan2-4.fna&oh=00_AfAF_2xkWbg1xx5ssnZqCLPYrk9_vGWpa2mL8rJ-4KVzEw&oe=64BACEE1"
                             alt="avatar"
                         />
-                        <div className="current-time">Tuần 35 (Tuần học thứ 11): 29/05 - 03/06 </div>
+                        <div className="current-time">Tuần học thứ {lessionNumber}: 17/07 - 23/07 </div>
                     </div>
                 </div>
                 {options === 'list' && <ClassList handleSetOptions={handleSetOptions} />}
