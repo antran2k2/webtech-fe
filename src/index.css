@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+* {
+  font-family: "FS PF BeauSans Pro Regular", system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.font-fs-pf-beausans-pro-bbook {
+  font-family: "FS PF BeauSans Pro Bbook";
+
+  * {
+    font-family: "FS PF BeauSans Pro Bbook";
+  }
+}
