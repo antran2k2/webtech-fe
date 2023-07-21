@@ -1,26 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import './PopupQuiz.scss';
-import useFetch from '../../../hooks/useFetch';
 import { formatTime } from '../../../utils/functionCusom/functionCusom';
 
-function PopupQuiz({ classSelect, changeDisplayQuiz }) {
-    const [questions, setQuestions] = useState([]);
+function PopupQuiz({ changeDisplayQuiz, quiz }) {
+    const [questions, setQuestions] = useState(JSON.parse(quiz.infoQuiz));
     const [statusDoing, setStatusDoing] = useState(true);
-    const [point, setPoint] = useState(0);
-
-    // Những câu hỏi
-    const { listData: quiz, loading } = useFetch(
-        `http://localhost:8080/student/class/quiz?classCode=20230001&lessionNumber=17`,
-    );
-
-    console.log(classSelect);
-
-    useEffect(() => {
-        if (quiz.infoQuiz) {
-            setQuestions(JSON.parse(quiz.infoQuiz));
-        }
-    }, [quiz]);
+    const [point, setPoint] = useState({
+        totalCorrectAnswer: 0,
+        point: 0,
+        all: 0,
+    });
 
     // Đáp án mẫu
     const answerOptions = ['A', 'B', 'C', 'D'];
@@ -45,6 +35,7 @@ function PopupQuiz({ classSelect, changeDisplayQuiz }) {
     const handleSubmitQuiz = () => {
         // Xử lý logic khi nộp bài kiểm tra
         let totalCorrectAnswer = 0;
+        let point = 0;
 
         for (let i = 0; i < questions.length; i++) {
             try {
@@ -56,7 +47,13 @@ function PopupQuiz({ classSelect, changeDisplayQuiz }) {
             }
         }
 
-        setPoint(totalCorrectAnswer);
+        point = ((totalCorrectAnswer / questions.length) * 10).toFixed(2);
+
+        setPoint({
+            point,
+            totalCorrectAnswer,
+            all: questions.length,
+        });
         setStatusDoing(false);
     };
 
@@ -103,7 +100,9 @@ function PopupQuiz({ classSelect, changeDisplayQuiz }) {
                 ) : (
                     <>
                         <div className="title-point">Bạn đã hoàn thành kiểm tra</div>
-                        <div className="point">Điểm số của bạn là {point}</div>
+                        <div className="point">
+                            Điểm số của bạn là {point.point} ({point.totalCorrectAnswer}/{point.all})
+                        </div>
                         <button className="btn-add-question" onClick={changeDisplayQuiz}>
                             Xác nhận
                         </button>

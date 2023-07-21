@@ -21,7 +21,7 @@ function InforClass({ classSelect }) {
 
     // Trang thái PopupQuiz
     const [statusPopupQuiz, setStatusPopupQuiz] = useState(false);
-    const [isActivePopupQuiz, setIsActivePopupQuiz] = useState(true);
+    const [isActivePopupQuiz, setIsActivePopupQuiz] = useState(false);
 
     // Thông tin vị trí cần kiểm tra
     const [checkLocation, setCheckLocation] = useState({
@@ -36,6 +36,8 @@ function InforClass({ classSelect }) {
     });
 
     const lessionNumber = checkLession();
+
+    const [quiz, setQuiz] = useState([]);
 
     useEffect(() => {
         // Lấy thông tin vị trí
@@ -55,6 +57,8 @@ function InforClass({ classSelect }) {
         // Kiểm tra có mã điểm danh không
 
         // kiểm tra xem đã có mã của buổi học này và đang trong thời gian được phép điểm danh không
+        const token = localStorage.getItem('token');
+
         axios
             .get(
                 `http://localhost:8080/teacher/class/attendance?classCode=${classSelect.classCode}&lessionNumber=${lessionNumber}`,
@@ -75,7 +79,25 @@ function InforClass({ classSelect }) {
                         //Active button điểm danh
                         setIsActiveAttendance(true);
                     }
-                } catch (error) {}
+                } catch (error) { }
+            });
+
+        // Kiểm tra xem có quiz không và cập nhật
+        axios
+            .get(
+                `http://localhost:8080/student/class/quiz?classCode=${classSelect.classCode}&lessionNumber=${lessionNumber}`,
+                {
+                    headers: { Authorization: 'Token ' + token },
+                },
+            )
+            .then((data) => {
+                try {
+                    // Kiểm tra xem có bài quiz hay không và cập nhật
+                    if (data.data) {
+                        setQuiz(data.data);
+                        setIsActivePopupQuiz(true);
+                    }
+                } catch (error) { }
             });
     }, []);
 
@@ -192,7 +214,7 @@ function InforClass({ classSelect }) {
                 </div>
             )}
 
-            {statusPopupQuiz && <PopupQuiz classSelect={classSelect} changeDisplayQuiz={changeDisplayQuiz} />}
+            {statusPopupQuiz && <PopupQuiz changeDisplayQuiz={changeDisplayQuiz} quiz={quiz} />}
         </>
     );
 }

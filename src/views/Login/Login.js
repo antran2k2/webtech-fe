@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { useState } from 'react';
+import axios from 'axios';
 import './Login.scss';
 
 function Login({ handleLogin }) {
@@ -52,6 +52,7 @@ function Login({ handleLogin }) {
                     />
                     <input
                         placeholder="Mật khẩu đăng nhập"
+                        type="password"
                         value={password}
                         onChange={(e) => {
                             setPassword(e.target.value);
