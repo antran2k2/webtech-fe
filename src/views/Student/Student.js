@@ -54,10 +54,13 @@ function Student() {
                             </div>
                         </div>
                         <div className="avatar">
-                            <img
-                                src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/313928031_1857605907938653_6284185701097598776_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZD_ddflYUFUAX9aKNAg&_nc_ht=scontent.fhan2-4.fna&oh=00_AfAF_2xkWbg1xx5ssnZqCLPYrk9_vGWpa2mL8rJ-4KVzEw&oe=64BACEE1"
-                                alt="avatar"
-                            />
+                            <div className='avatar-name'>
+                                <div className='avatar-name-text'>Nguyễn Thị Đức</div>
+                                <img
+                                    src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/313928031_1857605907938653_6284185701097598776_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZD_ddflYUFUAX9aKNAg&_nc_ht=scontent.fhan2-4.fna&oh=00_AfAF_2xkWbg1xx5ssnZqCLPYrk9_vGWpa2mL8rJ-4KVzEw&oe=64BACEE1"
+                                    alt="avatar"
+                                />
+                            </div>
                             <div className="current-time">Tuần học thứ {lessionNumber}: 17/07 - 23/07 </div>
                         </div>
                     </div>
