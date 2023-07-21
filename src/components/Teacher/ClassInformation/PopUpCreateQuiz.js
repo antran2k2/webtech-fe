@@ -51,7 +51,7 @@ function PopUpCreateQuiz({ handlePopUp, classObj }) {
                     lessionNumber: lessionNumber,
                     infoQuiz: JSON.stringify(questions),
                     timeStart: timeStart + ':00',
-                    timeEnd: timeStart + ':00',
+                    timeEnd: timeEnd + ':00',
                 },
                 {
                     headers: { Authorization: 'Token ' + token },

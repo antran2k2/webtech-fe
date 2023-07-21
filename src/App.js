@@ -2,12 +2,11 @@ import axios from 'axios';
 import './App.scss';
 
 import Login from './views/Login/Login.js';
-import Student from './views/Student/Student'
-import Teacher from './views/Teacher/Teacher';
-
+import Student from './views/Student/Student.js';
+import Teacher from './views/Teacher/Teacher.js';
 import { useEffect, useState, useContext } from 'react';
 import ToastMessage from './components/ToastMessage/ToastMessage';
-import { ToastMessageContext } from './context/ToastMessageContext.jsx';
+import { ToastMessageContext } from './context/ToastMessageContext.js';
 
 function App() {
     const [status, setStatus] = useState('login');

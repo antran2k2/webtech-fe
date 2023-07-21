@@ -2,7 +2,6 @@ import * as XLSX from 'xlsx';
 
 function ExportButton({ data }) {
     const handleExport = () => {
-        
         const worksheet = XLSX.utils.json_to_sheet(data);
 
         worksheet['A1'].v = 'STT';

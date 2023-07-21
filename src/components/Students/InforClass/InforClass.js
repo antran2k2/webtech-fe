@@ -79,7 +79,7 @@ function InforClass({ classSelect }) {
                         //Active button điểm danh
                         setIsActiveAttendance(true);
                     }
-                } catch (error) { }
+                } catch (error) {}
             });
 
         // Kiểm tra xem có quiz không và cập nhật
@@ -97,7 +97,7 @@ function InforClass({ classSelect }) {
                         setQuiz(data.data);
                         setIsActivePopupQuiz(true);
                     }
-                } catch (error) { }
+                } catch (error) {}
             });
     }, []);
 

@@ -29,7 +29,7 @@ function ToastMessageProvider({ children }) {
         handleToastMessage,
     };
 
-    return <ToastMessageContext.Provider value={value} > {children} </ToastMessageContext.Provider>;
+    return <ToastMessageContext.Provider value={value}>{children}</ToastMessageContext.Provider>;
 }
 
 export { ToastMessageContext, ToastMessageProvider };
